@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: city-events-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: city-events
+  template:
+    metadata:
+      labels:
+        app: city-events
+    spec:
+      containers:
+        - name: city-events
+          image: city-events:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

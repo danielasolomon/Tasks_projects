@@ -1,0 +1,8 @@
+### GET request to example server
+GET http://localhost:8080/events
+###
+GET http://localhost:8080/events/city/Bucharest
+###
+GET http://127.0.0.1:58705/events
+###
+GET http://127.0.0.1:58705/events/city/Bucharest
