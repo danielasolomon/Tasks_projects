@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: city-events
-          image: city-events:1.0
+          image: city-events:2.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
