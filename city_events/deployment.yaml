@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: city-events-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: city-events
+  template:
+    metadata:
+      labels:
+        app: city-events
+    spec:
+      containers:
+        - name: city-events
+          image: city-events:2.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
