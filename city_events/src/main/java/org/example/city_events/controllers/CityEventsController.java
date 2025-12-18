@@ -12,13 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/events")
 public class CityEventsController {
-//    record Event(Long id, String name, String city){};
-//
-//    private final List<Event> events = List.of(
-//            new Event(1L,"Rock concert", "Bucharest"),
-//            new Event(2L,"Painting meetup", "Brasov"),
-//            new Event(3L,"Games night", "Medias")
-//    );
 
     private final EventService eventService;
 
@@ -35,18 +28,5 @@ public class CityEventsController {
     public List<Event> getByCity(@PathVariable String city) {
         return eventService.getEventsByCity(city);
     }
-
-
-//    @GetMapping("/events")
-//    public List<Event> getEvents() {
-//        return events;
-//    }
-//
-//    @GetMapping("/events/city/{city}")
-//    public List<Event> getByCity(@PathVariable String city) {
-//        return events.stream()
-//                .filter(e ->e.city.equalsIgnoreCase(city))
-//                .toList();
-//    }
 
 }
