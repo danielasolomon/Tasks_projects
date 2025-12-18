@@ -1,4 +1,4 @@
-package org.example.city_events.controllers;
+package org.example.city_events.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
 package org.example.city_events.repo;
 
-import org.example.city_events.controllers.Event;
+import org.example.city_events.models.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
